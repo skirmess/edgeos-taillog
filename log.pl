@@ -61,7 +61,7 @@ sub printEntry {
 	if ( $rule =~ m/-A$/ ) {
 		printEntry2(GREEN, $entry);
 	}
-	elsif ( $rule =~ m/-default-D$/ ) {
+	elsif (( $rule =~ m/-default-D$/ ) or ( $rule =~ m/-2-D$/ )) {
 		printEntry2(MAGENTA, $entry);
 	}
 	elsif ( $rule =~ m/-[DR]$/ ) {
